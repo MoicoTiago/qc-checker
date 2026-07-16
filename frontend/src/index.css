@@ -1,0 +1,129 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --font-scale: 1;
+}
+
+/* Font Size Scaling - Override Tailwind text utilities */
+.text-xs { font-size: calc(0.75rem * var(--font-scale)) !important; }
+.text-sm { font-size: calc(0.875rem * var(--font-scale)) !important; }
+.text-base { font-size: calc(1rem * var(--font-scale)) !important; }
+.text-lg { font-size: calc(1.125rem * var(--font-scale)) !important; }
+.text-xl { font-size: calc(1.25rem * var(--font-scale)) !important; }
+.text-2xl { font-size: calc(1.5rem * var(--font-scale)) !important; }
+.text-3xl { font-size: calc(1.875rem * var(--font-scale)) !important; }
+.text-4xl { font-size: calc(2.25rem * var(--font-scale)) !important; }
+.text-5xl { font-size: calc(3rem * var(--font-scale)) !important; }
+
+/* Scale base text for elements without explicit size classes */
+body {
+  font-size: calc(1rem * var(--font-scale));
+}
+
+/* Font Size Slider Styling */
+input[type="range"].font-size-slider {
+  -webkit-appearance: none;
+  appearance: none;
+  height: 8px;
+  border-radius: 4px;
+  background: linear-gradient(to right, #e5e7eb 0%, #4f46e5 50%, #e5e7eb 100%);
+  outline: none;
+}
+
+input[type="range"].font-size-slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background: #4f46e5;
+  cursor: pointer;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  transition: transform 0.15s ease;
+}
+
+input[type="range"].font-size-slider::-webkit-slider-thumb:hover {
+  transform: scale(1.1);
+}
+
+input[type="range"].font-size-slider::-moz-range-thumb {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background: #4f46e5;
+  cursor: pointer;
+  border: none;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.dark input[type="range"].font-size-slider {
+  background: linear-gradient(to right, #374151 0%, #6366f1 50%, #374151 100%);
+}
+
+.dark input[type="range"].font-size-slider::-webkit-slider-thumb {
+  background: #6366f1;
+}
+
+.dark input[type="range"].font-size-slider::-moz-range-thumb {
+  background: #6366f1;
+}
+
+/* Colorblind Filters */
+.colorblind-protanopia {
+  filter: url('#protanopia-filter');
+}
+
+.colorblind-deuteranopia {
+  filter: url('#deuteranopia-filter');
+}
+
+.colorblind-tritanopia {
+  filter: url('#tritanopia-filter');
+}
+
+.colorblind-achromatopsia {
+  filter: grayscale(100%);
+}
+
+/* High Contrast Mode */
+.high-contrast {
+  --tw-text-opacity: 1;
+}
+
+.high-contrast .text-gray-400,
+.high-contrast .text-gray-500,
+.high-contrast .text-gray-600 {
+  color: rgb(55 65 81);
+}
+
+.high-contrast.dark .text-gray-400,
+.high-contrast.dark .text-gray-500,
+.high-contrast.dark .text-gray-600,
+.high-contrast.dark .text-gray-300 {
+  color: rgb(229 231 235);
+}
+
+.high-contrast .bg-gray-50 {
+  background-color: rgb(255 255 255);
+}
+
+.high-contrast .border-gray-200,
+.high-contrast .border-gray-300 {
+  border-color: rgb(75 85 99);
+}
+
+.high-contrast.dark .border-gray-200,
+.high-contrast.dark .border-gray-300,
+.high-contrast.dark .border-gray-700 {
+  border-color: rgb(156 163 175);
+}
+
+/* Reduced Motion Mode */
+.reduced-motion,
+.reduced-motion * {
+  animation-duration: 0.001ms !important;
+  animation-iteration-count: 1 !important;
+  transition-duration: 0.001ms !important;
+}
