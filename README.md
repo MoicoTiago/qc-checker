@@ -10,6 +10,12 @@ An AI-assisted quality-control report analyser for the construction industry. QC
 
 ![QC Checker public help page](docs/images/qc-checker-home.png)
 
+### Portfolio screenshots
+
+| Annotated report result | Analytics dashboard |
+| --- | --- |
+| ![Expanded QC findings for an analysed construction report](docs/images/qc-annotated-report-result.png) | ![Administrator analytics dashboard showing report quality and time savings](docs/images/qc-analytics-dashboard.png) |
+
 ## Project overview
 
 QC Checker was developed as a final-year Applied Software Engineering group project at Cardiff University. It demonstrates a production-style MERN architecture, automated report processing, role-based access control, bilingual English/Welsh content, analytics dashboards, accessibility preferences, and extensive automated testing.
